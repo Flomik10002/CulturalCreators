@@ -1,0 +1,27 @@
+{
+  "953832": {
+    "v1.1.0": {
+      "cultural-creators-fabric-1.20.1-1.1.0.jar": {
+        "fileId": 8642479,
+        "publishedAt": "2026-08-13T20:18:40Z",
+        "jar": "cultural-creators-fabric-1.20.1-1.1.0.jar",
+        "loader": "Fabric",
+        "mcVersion": "1.20.1"
+      },
+      "cultural-creators-forge-1.20.1-1.1.0.jar": {
+        "fileId": 8642480,
+        "publishedAt": "2026-08-13T20:18:41Z",
+        "jar": "cultural-creators-forge-1.20.1-1.1.0.jar",
+        "loader": "Forge",
+        "mcVersion": "1.20.1"
+      },
+      "cultural-creators-neoforge-1.21.1-1.1.0.jar": {
+        "fileId": 8642481,
+        "publishedAt": "2026-08-13T20:18:42Z",
+        "jar": "cultural-creators-neoforge-1.21.1-1.1.0.jar",
+        "loader": "NeoForge",
+        "mcVersion": "1.21.1"
+      }
+    }
+  }
+}
