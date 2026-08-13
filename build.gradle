@@ -58,7 +58,15 @@ dependencies {
 	// The mods the recipes target. Both stay optional at runtime — see the
 	// neoforge:conditions on every recipe and the mandatory=false entries in
 	// neoforge.mods.toml — but the dev runs need them to load the recipes at all.
-	implementation "com.simibubi.create:create-${project.minecraft_version}:${project.create_version}"
+	implementation("com.simibubi.create:create-${project.minecraft_version}:${project.create_version}") {
+		// Create publishes the mods it was tested against — JEI and Farmer's Delight —
+		// as runtime dependencies, and the runs resolve consistently with
+		// runtimeClasspath. Left in, they pin both to Create's versions and the run
+		// tasks fail outright against the versions picked below. Registrate, Ponder
+		// and Flywheel are genuine transitive dependencies and stay.
+		exclude group: 'mezz.jei'
+		exclude group: 'maven.modrinth'
+	}
 	implementation "maven.modrinth:cultural-delights:${project.cultural_delights_version}"
 
 	// Available in the dev runs for testing, never a hard dependency: the API is
