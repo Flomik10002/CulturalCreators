@@ -11,6 +11,28 @@ base {
 	archivesName = "${project.archives_base_name}-neoforge-${project.minecraft_version}"
 }
 
+repositories {
+	maven {
+		name = 'Create'
+		url = 'https://maven.createmod.net'
+	}
+	maven {
+		name = 'tterrag'
+		url = 'https://maven.tterrag.com/'
+	}
+	maven {
+		name = 'BlameJared'
+		url = 'https://maven.blamejared.com/'
+	}
+	maven {
+		name = 'Modrinth'
+		url = 'https://api.modrinth.com/maven'
+		content {
+			includeGroup 'maven.modrinth'
+		}
+	}
+}
+
 neoForge {
 	version = project.neo_version
 
@@ -30,6 +52,22 @@ neoForge {
 			sourceSet sourceSets.main
 		}
 	}
+}
+
+dependencies {
+	// The mods the recipes target. Both stay optional at runtime — see the
+	// neoforge:conditions on every recipe and the mandatory=false entries in
+	// neoforge.mods.toml — but the dev runs need them to load the recipes at all.
+	implementation "com.simibubi.create:create-${project.minecraft_version}:${project.create_version}"
+	implementation "maven.modrinth:cultural-delights:${project.cultural_delights_version}"
+
+	// Available in the dev runs for testing, never a hard dependency: the API is
+	// compile-only and the full jars are only added to the run classpath.
+	compileOnly "mezz.jei:jei-${project.minecraft_version}-neoforge-api:${project.jei_version}"
+	additionalRuntimeClasspath "mezz.jei:jei-${project.minecraft_version}-neoforge:${project.jei_version}"
+
+	compileOnly "maven.modrinth:farmers-delight:${project.farmers_delight_version}"
+	additionalRuntimeClasspath "maven.modrinth:farmers-delight:${project.farmers_delight_version}"
 }
 
 processResources {
