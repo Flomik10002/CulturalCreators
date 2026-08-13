@@ -11,6 +11,23 @@ base {
 	archivesName = "${project.archives_base_name}-forge-${project.minecraft_version}"
 }
 
+repositories {
+	// JEI.
+	maven {
+		name = 'BlameJared'
+		url = 'https://maven.blamejared.com/'
+	}
+	// Create, Cultural Delights and Farmer's Delight, which publish no Forge
+	// artifacts anywhere else. Create bundles Flywheel and Registrate in its jar.
+	maven {
+		name = 'Modrinth'
+		url = 'https://api.modrinth.com/maven'
+		content {
+			includeGroup 'maven.modrinth'
+		}
+	}
+}
+
 legacyForge {
 	version = project.forge_version
 
@@ -30,6 +47,29 @@ legacyForge {
 			sourceSet sourceSets.main
 		}
 	}
+}
+
+obfuscation {
+	// Remapping counterpart of additionalRuntimeClasspath, for mods that should only
+	// be present in the dev runs.
+	createRemappingConfiguration(configurations.additionalRuntimeClasspath)
+}
+
+dependencies {
+	// The mods the recipes target. Both stay optional at runtime — every recipe
+	// carries a forge:mod_loaded condition and mods.toml marks them mandatory=false —
+	// but the dev runs need them for the recipes to load at all. These configurations
+	// remap the published SRG jars to the official mappings of the workspace.
+	modImplementation "maven.modrinth:create:${project.create_version}"
+	modImplementation "maven.modrinth:cultural-delights:${project.cultural_delights_version}"
+
+	// Available in the dev runs for testing, never a hard dependency: the API is
+	// compile-only and the full jars only land on the run classpath.
+	modCompileOnly "mezz.jei:jei-${project.minecraft_version}-forge-api:${project.jei_version}"
+	modAdditionalRuntimeClasspath "mezz.jei:jei-${project.minecraft_version}-forge:${project.jei_version}"
+
+	modCompileOnly "maven.modrinth:farmers-delight:${project.farmers_delight_version}"
+	modAdditionalRuntimeClasspath "maven.modrinth:farmers-delight:${project.farmers_delight_version}"
 }
 
 processResources {
