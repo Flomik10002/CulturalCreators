@@ -1,0 +1,20 @@
+{
+  "item.culturalcreators.creamed_corn_bucket": "奶油玉米桶",
+  "block.culturalcreators.creamed_corn_block": "奶油玉米",
+
+  "fluid.culturalcreators.creamed_corn": "奶油玉米",
+
+  "item.culturalcreators.incomplete_elote": "烤玉米（半成品）",
+  "item.culturalcreators.incomplete_beef_burrito": "牛肉卷饼（半成品）",
+  "item.culturalcreators.incomplete_mutton_sandwich": "羊肉三明治（半成品）",
+  "item.culturalcreators.incomplete_fried_eggplant_pasta": "烤茄意面（半成品）",
+  "item.culturalcreators.incomplete_eggplant_burger": "茄子汉堡（半成品）",
+  "item.culturalcreators.incomplete_hearty_salad": "丰盛色拉（半成品）",
+  "item.culturalcreators.incomplete_chicken_taco": "鸡肉塔可（半成品）",
+  "item.culturalcreators.incomplete_fish_taco": "鱼肉塔可（半成品）",
+  "item.culturalcreators.incomplete_pork_wrap": "猪肉卷饼（半成品）",
+  "item.culturalcreators.incomplete_spicy_curry": "辣味咖喱（半成品）",
+  "item.culturalcreators.incomplete_exotic_roll_medley": "异国寿司拼盘（半成品）",
+
+  "itemgroup.culturalcreators": "多元动力"
+}
