@@ -1,20 +1,20 @@
 {
-  "item.culturalcreators.creamed_corn_bucket": "Ведро кукурузного крем-супа",
-  "block.culturalcreators.creamed_corn_block": "Кукурузный крем-суп",
+  "item.culturalcreators.creamed_corn_bucket": "Ведро кукурузы со сливками",
+  "block.culturalcreators.creamed_corn_block": "Кукуруза со сливками",
 
-  "fluid.culturalcreators.creamed_corn": "Кукурузный крем-суп",
+  "fluid.culturalcreators.creamed_corn": "Кукуруза со сливками",
 
-  "item.culturalcreators.incomplete_elote": "Незавершённый элоте",
-  "item.culturalcreators.incomplete_beef_burrito": "Незавершённый буррито с говядиной",
-  "item.culturalcreators.incomplete_mutton_sandwich": "Незавершённый сэндвич с бараниной",
-  "item.culturalcreators.incomplete_fried_eggplant_pasta": "Незавершённая паста с жареным баклажаном",
-  "item.culturalcreators.incomplete_eggplant_burger": "Незавершённый бургер с баклажаном",
-  "item.culturalcreators.incomplete_hearty_salad": "Незавершённый сытный салат",
-  "item.culturalcreators.incomplete_chicken_taco": "Незавершённое тако с курицей",
-  "item.culturalcreators.incomplete_fish_taco": "Незавершённое тако с рыбой",
-  "item.culturalcreators.incomplete_pork_wrap": "Незавершённый ролл со свининой",
-  "item.culturalcreators.incomplete_spicy_curry": "Незавершённое острое карри",
-  "item.culturalcreators.incomplete_exotic_roll_medley": "Незавершённое ассорти экзотических роллов",
+  "item.culturalcreators.incomplete_elote": "Незаконченный элот",
+  "item.culturalcreators.incomplete_beef_burrito": "Незаконченное буррито с говядиной",
+  "item.culturalcreators.incomplete_mutton_sandwich": "Незаконченный сэндвич с бараниной",
+  "item.culturalcreators.incomplete_fried_eggplant_pasta": "Незаконченная паста с жареными баклажанами",
+  "item.culturalcreators.incomplete_eggplant_burger": "Незаконченный баклажанбургер",
+  "item.culturalcreators.incomplete_hearty_salad": "Незаконченный сытный салат",
+  "item.culturalcreators.incomplete_chicken_taco": "Незаконченное куриное тако",
+  "item.culturalcreators.incomplete_fish_taco": "Незаконченный рыбный тако",
+  "item.culturalcreators.incomplete_pork_wrap": "Незаконченный рулет со свининой",
+  "item.culturalcreators.incomplete_spicy_curry": "Незаконченное острое карри",
+  "item.culturalcreators.incomplete_exotic_roll_medley": "Незаконченное экзотическое попурри из роллов",
 
   "itemgroup.culturalcreators": "Cultural Creators"
 }
