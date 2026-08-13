@@ -60,13 +60,14 @@ dependencies {
 	implementation "maven.modrinth:create:${project.create_version}"
 	implementation "maven.modrinth:cultural-delights:${project.cultural_delights_version}"
 
-	// Available in the dev runs for testing, never a hard dependency: the API is
-	// compile-only and the full jars are only added to the run classpath.
+	// Available in the dev runs for testing, never compiled against: only the JEI API
+	// is on the compile classpath. These have to be runtimeOnly rather than
+	// additionalRuntimeClasspath — the latter is for plain libraries, and FML does not
+	// pick mods up from it, which leaves Cultural Delights without Farmer's Delight.
 	compileOnly "mezz.jei:jei-${project.minecraft_version}-neoforge-api:${project.jei_version}"
-	additionalRuntimeClasspath "mezz.jei:jei-${project.minecraft_version}-neoforge:${project.jei_version}"
+	runtimeOnly "mezz.jei:jei-${project.minecraft_version}-neoforge:${project.jei_version}"
 
-	compileOnly "maven.modrinth:farmers-delight:${project.farmers_delight_version}"
-	additionalRuntimeClasspath "maven.modrinth:farmers-delight:${project.farmers_delight_version}"
+	runtimeOnly "maven.modrinth:farmers-delight:${project.farmers_delight_version}"
 }
 
 processResources {
